@@ -10,20 +10,6 @@ School of Data Science, Fudan University · Shanghai Innovation Institute · [Lo
 
 Official project website and manuscript for X-World. The website includes the method overview, benchmark and ablation results, and six real-world bimanual manipulation demonstrations.
 
-X-World connects a variable-view video backbone to a shared action expert through fixed-length tokens. It reaches 98.5% mean success on LIBERO, 76.5% on zero-shot LIBERO-Plus, and 81.7% across six real-world tasks.
-
-## Website
-
-The static website is in [`docs/`](docs/). GitHub Pages publishes from `main` → `/docs`, following the organization’s [TIDE project](https://github.com/LogosRoboticsGroup/TIDE) layout.
-
-For local preview:
-
-```sh
-python -m http.server 8765 --bind 127.0.0.1 --directory docs
-```
-
-Open `http://127.0.0.1:8765/`. Edit `docs/index.html`, `docs/styles.css`, and `docs/app.js` to update the page. See [MAINTENANCE.md](MAINTENANCE.md) for media and release notes.
-
 ## BibTeX
 
 ```bibtex
