@@ -3,8 +3,7 @@
 ### [Project](https://logosintelligencelab.github.io/X-World/) | [PDF](docs/assets/papers/X-World.pdf) | [BibTeX](#bibtex)
 
 > **X-World: Transferring Video Priors to Variable-View Robot Control**  
-> [Chun Gu](https://sulvxiangxin.github.io/), [Xiaofei Wei](https://waboutme.github.io/), [Yiming Chen](https://openreview.net/profile?id=~Yiming_Chen9), [Juntong Zhang](https://juntongz.github.io/), [Li Zhang](https://lzrobots.github.io/)†  
-> †Corresponding author: [lizhangfd@fudan.edu.cn](mailto:lizhangfd@fudan.edu.cn)
+> [Chun Gu](https://sulvxiangxin.github.io/), [Xiaofei Wei](https://waboutme.github.io/), [Yiming Chen](https://openreview.net/profile?id=~Yiming_Chen9), [Juntong Zhang](https://juntongz.github.io/), [Li Zhang](https://lzrobots.github.io/)
 
 School of Data Science, Fudan University · Shanghai Innovation Institute · [Logos Intelligence Lab](https://github.com/LogosIntelligenceLab)
 
