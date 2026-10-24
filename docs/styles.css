@@ -32,3 +32,6 @@ dialog{border:0;border-radius:8px;padding:55px 25px 18px;max-width:min(1300px,94
  .method-notes .step-number{position:absolute;top:0;left:0;margin:0}
  .method-notes p{font-size:14px}
 }
+
+/* Keep source citations readable without widening numeric columns. */
+.method-citation{display:block;margin-top:4px;font-size:12px;line-height:1.4;font-weight:400;color:var(--blue);white-space:normal;max-width:235px;text-decoration:underline;text-underline-offset:2px}

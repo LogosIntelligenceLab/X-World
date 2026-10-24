@@ -34,12 +34,46 @@ const ablations = [
   ['Full model',99.6,99.4,99.0,95.8,98.5]
 ];
 
+// Original method sources; OFT variant definitions follow LIBERO-Plus.
+const methodReferences = {
+  'Diffusion Policy': ['Chi et al., 2025', 'https://diffusion-policy.cs.columbia.edu/'],
+  'OpenVLA': ['Kim et al., 2024', 'https://arxiv.org/abs/2406.09246'],
+  'SpatialVLA': ['Qu et al., 2025', 'https://arxiv.org/abs/2501.15830'],
+  'CoT-VLA': ['Zhao et al., 2025', 'https://arxiv.org/abs/2503.22020'],
+  'π₀-Fast': ['Pertsch et al., 2025', 'https://arxiv.org/abs/2501.09747'],
+  'GR00T-N1': ['Bjorck et al., 2025', 'https://arxiv.org/abs/2503.14734'],
+  'π₀': ['Black et al., 2024', 'https://arxiv.org/abs/2410.24164'],
+  'F1': ['Lv et al., 2025', 'https://arxiv.org/abs/2509.06951'],
+  'InternVLA-M1': ['InternVLA-M1 Contributors, 2025', 'https://arxiv.org/abs/2510.13778'],
+  'Discrete Diffusion VLA': ['Liang et al., 2025', 'https://arxiv.org/abs/2508.20072'],
+  'Genie-Envisioner': ['Liao et al., 2025', 'https://arxiv.org/abs/2508.05635'],
+  'π₀.₅': ['Physical Intelligence et al., 2025', 'https://arxiv.org/abs/2504.16054'],
+  'GR00T-N1.6': ['GEAR Team et al., 2025', 'https://research.nvidia.com/labs/gear/gr00t-n1_6/'],
+  'OpenVLA-OFT': ['Kim et al., 2025', 'https://arxiv.org/abs/2502.19645'],
+  'X-VLA': ['Zheng et al., 2026', 'https://arxiv.org/abs/2510.10274'],
+  'OpenVLA-OFT (w)': ['Kim et al., 2025', 'https://arxiv.org/abs/2502.19645'],
+  'NORA': ['Hung et al., 2025', 'https://arxiv.org/abs/2504.19854'],
+  'WorldVLA': ['Cen et al., 2025', 'https://arxiv.org/abs/2506.21539'],
+  'UniVLA': ['Bu et al., 2025', 'https://arxiv.org/abs/2505.06111'],
+  'RIPT-VLA': ['Tan et al., 2025', 'https://arxiv.org/abs/2505.17016'],
+  'OpenVLA-OFT (m)': ['Kim et al., 2025', 'https://arxiv.org/abs/2502.19645']
+};
+
 function populateTable(id, rows) {
   const body = document.querySelector(`#${id} tbody`);
   rows.forEach(([name,...values]) => {
     const row = document.createElement('tr');
     if(name==='X-World'||name==='Full model') row.className='ours-row';
-    const heading=document.createElement('th'); heading.scope='row'; heading.textContent=name; row.append(heading);
+    const heading=document.createElement('th'); heading.scope='row'; heading.textContent=name;
+    const reference=methodReferences[name];
+    if(reference){
+      const citation=document.createElement('a'); citation.className='method-citation';
+      citation.href=reference[1]; citation.textContent=`(${reference[0]})`;
+      citation.target='_blank'; citation.rel='noopener noreferrer';
+      citation.setAttribute('aria-label',`${name}: ${reference[0]} (opens in a new tab)`);
+      heading.append(citation);
+    }
+    row.append(heading);
     values.forEach(value=>{const cell=document.createElement('td');cell.textContent=value.toFixed(1);row.append(cell);});
     body.append(row);
   });
