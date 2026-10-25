@@ -11,6 +11,8 @@ Official project website and manuscript for X-World. The website includes the me
 
 ## BibTeX
 
+If you find this project helpful, please consider citing our paper:
+
 ```bibtex
 @misc{gu2026xworld,
   title = {X-World: Transferring Video Priors to Variable-View Robot Control},
@@ -21,7 +23,3 @@ Official project website and manuscript for X-World. The website includes the me
 ```
 
 The arXiv identifier will be added when available.
-
-## Acknowledgements
-
-The page’s visual direction is inspired by [TIDE](https://logosroboticsgroup.github.io/TIDE/). X-World research figures, results, and recordings come from the accompanying manuscript and supplementary material.
